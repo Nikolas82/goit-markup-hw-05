@@ -56,7 +56,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button data-modal-open type="button" class="button">
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!--Особливості-->
@@ -115,18 +117,34 @@
         </div>
       </section>
       <!--Чим ми займаємося-->
+
       <section class="section work">
         <div class="container">
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="section-list">
             <li class="line">
-              <img src="./images/box1.jpg" alt="фото 1" width="370" />
+              <div class="wrapper">
+                <img src="./images/box1.jpg" alt="фото 1" width="370" />
+                <div class="overlay-box">
+                  <p class="overlay-text">Десктопні додатки</p>
+                </div>
+              </div>
             </li>
             <li class="line">
-              <img src="./images/box2.jpg" alt="фото 2" width="370" />
+              <div class="wrapper">
+                <img src="./images/box2.jpg" alt="фото 2" width="370" />
+                <div class="overlay-box">
+                  <p class="overlay-text">Мобільні додатки</p>
+                </div>
+              </div>
             </li>
             <li class="line">
-              <img src="./images/box3.jpg" alt="фото 3" width="370" />
+              <div class="wrapper">
+                <img src="./images/box3.jpg" alt="фото 3" width="370" />
+                <div class="overlay-box">
+                  <p class="overlay-text">Дизайнерські рішення</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -420,5 +438,16 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" data-modal-close type="button">
+          <svg class="close-btn-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
